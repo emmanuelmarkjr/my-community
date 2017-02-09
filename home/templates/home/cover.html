@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block head %}
+  <link href="{% static 'css/cover.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block body %}
+<body>
+  <div class="container">
+	<div class="login-form">
+    {% if form.non_field_errors %}
+      {% for error in form.non_field_errors %}
+        <div class="alert alert-danger alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          {{ error }}
+        </div>
+      {% endfor %}
+    {% endif %}
+    <center><a href="{% url 'home' %}"><img src="/staticfiles/img/logo.png" style="width: 70px;" alt="Sporthilites" /></a>
+      <h2>{% trans 'Log in' %}</h2></center>
+          <form method="post" action="{% url 'login' %}" class="form-signin" role="form">
+            {% csrf_token %}
+            <div class="form-group{% if form.username.errors %} has-error{% endif %}">
+              <label for="username">{% trans 'Username' %}</label>
+              <input type="text" class="form-control" id="username" name="username">
+              {% for error in form.username.errors %}
+                <label class="control-label">{{ error }}</label>
+              {% endfor %}
+            </div>
+            <div class="form-group{% if form.password.errors %} has-error{% endif %}">
+              <label for="password">{% trans 'Password' %}</label>
+              <input type="password" class="form-control" id="password" name="password">
+              {% for error in form.password.errors %}
+                <label class="control-label">{{ error }}</label>
+              {% endfor %}
+            </div>
+            <button type="submit" class="btn btn-block bt-login">{% trans 'Log in' %}</button>
+            </form>
+        <div class="form-footer">
+			<div class="row">
+				<div class="col-xs-7 col-sm-7 col-md-7">
+					<i class="fa fa-lock"></i>
+					<a href="{% url 'forgot' %}"> {% trans 'Forgot Password?' %} </a>
+				</div>
+				<div class="col-xs-5 col-sm-5 col-md-5">
+					<i class="fa fa-check"></i> <a href="{% url 'signup' %}"> {% trans 'Sign Up' %} </a>
+				</div>
+			</div>
+		</div>
+    </div>
+  </div>
+</body>
+{% endblock body %}

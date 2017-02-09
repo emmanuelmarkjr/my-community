@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load staticfiles i18n %}
+
+{% block head %}
+    <link href="{% static 'css/signup.css' %}" rel="stylesheet">
+{% endblock head %}
+
+{% block body %}
+<body>
+    <div class="container">
+	    <div class="login-form">
+	        <center><a href="{% url 'home' %}"><img src="/staticfiles/img/logo.png" style="width: 70px;" alt="My Community" /></a>
+            <h2>{% trans 'Sign Up' %}</h2></center>
+                <form action="{% url 'signup' %}" method="post" class="form-signin" role="form">
+                  {% csrf_token %}
+                  {% for field in form.visible_fields %}
+                    <div class="form-group{% if field.errors %} has-error{% endif %}">
+                      <label for="{{ field.label }}">{{ field.label }}</label>
+                      {{ field }}
+                      {% if field.help_text %}
+                        <span class="help-block">{{ field.help_text|safe }}</span>
+                      {% endif %}
+                      {% for error in field.errors %}
+                        <label class="control-label">{{ error }}</label>
+                      {% endfor %}
+                    </div>
+                  {% endfor %}
+                  <button type="submit" class="btn btn-block bt-login">{% trans 'Create an account' %}</button>
+                </form>
+        </div>
+  </div>
+  </body>
+{% endblock body %}
