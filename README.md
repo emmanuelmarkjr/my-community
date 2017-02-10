@@ -9,7 +9,9 @@ User demo account  <br/>
 username: mark <br/>
 password: 1234  <br/>
 
-Admin account  <br/>
+
+http://techtv.pythonanywhere.com/admin
+Admin account  <br/> 
 username: admin  <br/>
 password: 1234  <br/>
 
