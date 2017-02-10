@@ -22,7 +22,7 @@ Create a virtual environment. <br/><br/>
 sudo pip install -r requirements.txt to install all necessary dependencies and apps.  <br/><br/>
 python manage.py makemigrations and migrate  <br/><br/>
 python manage.py createsuperuser to create an admin account which can be accessed via localhost:port/admin  <br/><br/>
-If you encounter a "no auth_profile table" error, then do the makemigrations and migrate for individual 3rd party apps in the settings.py file. and run the createsuperuser again.  <br/><br/>
+If you encounter a "no auth_profile table" error, then do the makemigrations and migrate one after the other for each individual 3rd party app in the settings.py file. and run the createsuperuser again.  <br/><br/>
 configure the mail settings to enable email sending on password reset.  <br/><br/>
 python manage.py runserver to start your server  <br/>
 
