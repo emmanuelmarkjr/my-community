@@ -21,7 +21,7 @@ On your local server on an Ubuntu Machine  <br/>
 Create a virtual environment. <br/>
 sudo pip install virtualenv to install virtual environment<br/>
 sudo pip install virtualenvwrapper to install virtual environment wrapper<br/>
-mkvirtualenv <your virtual environment name> <br/>
+mkvirtualenv (your virtual environment name) <br/>
 it sets up necessary python packages to start your development
 then you see the name in rounded brackets before your machine's username. <br/>
 If you get "command error" on creating the virtual environment.<br/>
