@@ -4,13 +4,13 @@ A Powerful Social Community that combines the features of twitter(timeline and f
 
 Developed with django(Python). <br/>
 
-go to http://techtv.pythonanywhere.com to see the DEMO. <br/>
+go to http://mycommunity.pythonanywhere.com to see the DEMO. <br/>
 User demo account  <br/>
 username: mark <br/>
 password: 1234  <br/>
 
 
-http://techtv.pythonanywhere.com/admin
+http://mycommunity.pythonanywhere.com/admin
 Admin account  <br/> 
 username: admin  <br/>
 password: 1234  <br/>
