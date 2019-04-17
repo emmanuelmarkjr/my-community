@@ -1,6 +1,6 @@
 # my-community
 
-A Powerful Social Community that combines the features of twitter(timeline and feeds), nairaland(forum to post latest gists and stories) and stackoverflow(to ask questions and profer answers to others' problems). <br/>
+A very Powerful Social Community that combines the features of twitter(timeline and feeds), nairaland(forum to post latest gists and stories) and stackoverflow(to ask questions and profer answers to others' problems). <br/>
 
 Developed with django(Python). <br/>
 
